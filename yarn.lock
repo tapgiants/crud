@@ -616,7 +616,7 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2":
+"@babel/runtime@^7.0.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.2.0.tgz#b03e42eeddf5898e00646e4c840fa07ba8dcad7f"
   integrity sha512-oouEibCbHMVdZSDlJBO6bZmID/zA/G/Qx3H1d3rSNPTD+L8UNKvCat7aKWSJ74zYbm5zWGh0GQN0hKj8zYFTCg==
@@ -656,14 +656,12 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@tapgiants/form@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@tapgiants/form/-/form-1.0.8.tgz#b2295c2c1dcaa250ab6ce7c15628ce2274cc85da"
-  integrity sha512-aXOiEd12sPV482idOJ7EPqrR4vEQEhmeLKG2hy4uu8cF261zBfEwR9JCpfLiH3DeqInM5SeBDqgDg1Sjlb+aow==
+"@tapgiants/form@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@tapgiants/form/-/form-1.0.10.tgz#c996862753639401bcdd51922f85547cca5d2cff"
+  integrity sha512-zSiQud/q76gVTora6JZgYSGDQ54Nm0Ur0Mj+G82ZzuBRQ07+FjSezrJ3qSCimczvJWJUqKnepPv6oYMD1Sfbaw==
   dependencies:
     formik "^1.4.1"
-    react-autocomplete "^1.8.1"
-    react-datepicker "^2.0.0"
 
 "@tapgiants/graphql@^1.0.1":
   version "1.0.1"
@@ -1388,11 +1386,6 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.5:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
-  integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
-
 cli-cursor@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cli-cursor/-/cli-cursor-2.1.0.tgz#b35dac376479facc3e94747d41d0d0f5238ffcb5"
@@ -1556,14 +1549,6 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-react-context@<=0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.2.2.tgz#9836542f9aaa22868cd7d4a6f82667df38019dca"
-  integrity sha512-KkpaLARMhsTsgp0d2NA/R94F/eDLbhXERdIq3LvX2biCAXcDvHYoOqHfWCHf1+OLj+HKBotLG3KqaOOf+C1C+A==
-  dependencies:
-    fbjs "^0.8.0"
-    gud "^1.0.0"
-
 create-react-context@^0.2.2:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.2.3.tgz#9ec140a6914a22ef04b8b09b7771de89567cb6f3"
@@ -1604,11 +1589,6 @@ cyclist@~0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-0.2.2.tgz#1b33792e11e914a2fd6d6ed6447464444e5fa640"
   integrity sha1-GzN5LhHpFKL9bW7WRHRkRE5fpkA=
-
-date-fns@^2.0.0-alpha.23:
-  version "2.0.0-alpha.26"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.0.0-alpha.26.tgz#e46afd73a2b50e0359446309ee7cb631d7467227"
-  integrity sha512-UAptCZ53MVimUFR8MXTyHED51AVGIqFlBfWgiS/KIoSYiJGrWScx4PYQVNSWfK2Js+43OlokCW1ttnexBTJ5Bg==
 
 date-now@^0.1.4:
   version "0.1.4"
@@ -1709,11 +1689,6 @@ diffie-hellman@^5.0.0:
     bn.js "^4.1.0"
     miller-rabin "^4.0.0"
     randombytes "^2.0.0"
-
-dom-scroll-into-view@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/dom-scroll-into-view/-/dom-scroll-into-view-1.0.1.tgz#32abb92f0d8feca6215162aef43e4b449ab8d99c"
-  integrity sha1-Mqu5Lw2P7KYhUWKu9D5LRJq42Zw=
 
 domain-browser@^1.1.1:
   version "1.2.0"
@@ -3382,11 +3357,6 @@ pkg-dir@^3.0.0:
   dependencies:
     find-up "^3.0.0"
 
-popper.js@^1.14.4:
-  version "1.14.6"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.14.6.tgz#ab20dd4edf9288b8b3b6531c47c361107b60b4b0"
-  integrity sha512-AGwHGQBKumlk/MDfrSOf0JHhJCImdDMcGNoqKmKkU+68GFazv3CQ6q9r7Ja1sKDZmYWTckY/uLyEznheTDycnA==
-
 posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
@@ -3419,7 +3389,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2:
+prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
   integrity sha512-3pboPvLiWD7dkI3qf3KbUe6hKFKa52w+AE0VCqECtf+QHAKgOL37tTaNCnuX1nAAQ4ZhyP+kYVKf8rLmJ/feDQ==
@@ -3531,25 +3501,6 @@ react-apollo@^2.3.3:
     lodash.isequal "^4.5.0"
     prop-types "^15.6.0"
 
-react-autocomplete@^1.8.1:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/react-autocomplete/-/react-autocomplete-1.8.1.tgz#ebbbc400006aa91ad538b2d14727b9e7e5d06310"
-  integrity sha1-67vEAABqqRrVOLLRRye55+XQYxA=
-  dependencies:
-    dom-scroll-into-view "1.0.1"
-    prop-types "^15.5.10"
-
-react-datepicker@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-datepicker/-/react-datepicker-2.0.0.tgz#5818edfdd08af1b18cbc02b8a1c842cec906606f"
-  integrity sha512-3L3PrZLqbnEIBDXh4RkwlClCaCOFOPd2WYezo4vjXz5PSogrpXtG6UuAc21JtF8+3bBgcsZ/2BUH5F5b89VHsA==
-  dependencies:
-    classnames "^2.2.5"
-    date-fns "^2.0.0-alpha.23"
-    prop-types "^15.6.0"
-    react-onclickoutside "^6.7.1"
-    react-popper "^1.0.2"
-
 react-dom@^16.7.0:
   version "16.7.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.7.0.tgz#a17b2a7ca89ee7390bc1ed5eb81783c7461748b8"
@@ -3574,23 +3525,6 @@ react-lifecycles-compat@^3.0.2:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
-
-react-onclickoutside@^6.7.1:
-  version "6.7.1"
-  resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.7.1.tgz#6a5b5b8b4eae6b776259712c89c8a2b36b17be93"
-  integrity sha512-p84kBqGaMoa7VYT0vZ/aOYRfJB+gw34yjpda1Z5KeLflg70HipZOT+MXQenEhdkPAABuE2Astq4zEPdMqUQxcg==
-
-react-popper@^1.0.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/react-popper/-/react-popper-1.3.2.tgz#e723a0a7fe1c42099a13e5d494e9d7d74b352af4"
-  integrity sha512-UbFWj55Yt9uqvy0oZ+vULDL2Bw1oxeZF9/JzGyxQ5ypgauRH/XlarA5+HLZWro/Zss6Ht2kqpegtb6sYL8GUGw==
-  dependencies:
-    "@babel/runtime" "^7.1.2"
-    create-react-context "<=0.2.2"
-    popper.js "^1.14.4"
-    prop-types "^15.6.1"
-    typed-styles "^0.0.7"
-    warning "^4.0.2"
 
 react@^16.7.0:
   version "16.7.0"
@@ -4231,11 +4165,6 @@ tty-browserify@0.0.0:
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
   integrity sha1-oVe6QC2iTpv5V/mqadUk7tQpAaY=
 
-typed-styles@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/typed-styles/-/typed-styles-0.0.7.tgz#93392a008794c4595119ff62dde6809dbc40a3d9"
-  integrity sha512-pzP0PWoZUhsECYjABgCGQlRGL1n7tOHsgwYv3oIiEpJwGhFTuty/YNeduxQYzXXa3Ge5BdT6sHYIQYpl4uJ+5Q==
-
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
@@ -4374,13 +4303,6 @@ warning@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/warning/-/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
   integrity sha1-MuU3fLVy3kqwR1O9+IIcAe1gW3w=
-  dependencies:
-    loose-envify "^1.0.0"
-
-warning@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/warning/-/warning-4.0.2.tgz#aa6876480872116fa3e11d434b0d0d8d91e44607"
-  integrity sha512-wbTp09q/9C+jJn4KKJfJfoS6VleK/Dti0yqWSm6KMvJ4MRCXFQNapHuJXutJIrWV0Cf4AhTdeIe4qdKHR1+Hug==
   dependencies:
     loose-envify "^1.0.0"
 

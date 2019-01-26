@@ -217,16 +217,121 @@ export default withRouter(PaginatedList);
 
 ## withDeleteHandler API
 
-Description...
+Decorates a react component with delete ability.
+The decorated component will expect the properties
+described bellow.
 
 ### Props
 
-Props...
+#### `id`: String
+The id of the item that will be deleted.
 
+#### `mutation`: Object
+A GrahqQL mutation created with the [`graphql-tag`](https://github.com/apollographql/graphql-tag) package.
+The mutation that will trigger deletion.
+
+### `resource`: String
+Used as a `path` in order to find deleted item in the response. Also used to build the parent `path` namespace in which the `resource` `path` is.
+Usually singular name of the resource. For example `industry`
+
+### `onDelete`: Function
+A function that will be called when the deletion is successful.
+
+It receives deleted item.
+
+### `onErrors`: Function
+A function that will be called when the deletion is unsuccessful.
+
+It receives errors returned from the server.
+
+### `update`: Function
+Use in order to update the Apollo cache. This function will be passed as an update option of the `ApolloClient.mutate` [`method`](https://www.apollographql.com/docs/react/api/apollo-client.html#ApolloClient.mutate).
+You can use [`deleteFromList`](https://github.com/tapgiants/graphql#deletefromlistcache-dataproxy-query-object-path-string-deletecondition-functionvoid) from the  [`@tapgiants/graphql`](https://github.com/tapgiants/graphql) package. Or write your own implementation.
 
 ### withDeleteHandler example
 
 ```jsx
+import React from 'react';
+import { ApolloWrapper, deleteFromList } from '@tapgiants/graphql';
+import gql from 'graphql-tag';
+import { List, withDeleteHandler } from '@tapgiants/crud';
+
+const INDUSTRIES = gql`
+  query($filter: IndustryFilterInput, $input: ListInput) {
+    industries(input: $input, filter: $filter) @connection(key: "industries") {
+      list {
+        id
+        name
+      }
+    }
+  }
+`;
+
+const DELETE_INDUSTRY = gql`
+  mutation($input: IdInput!) {
+    deleteIndustry(input: $input) {
+      industry{
+        id
+        name
+      }
+      errors {
+        key
+        message
+      }
+    }
+  }
+`;
+
+const DeleteButtonMarkup = ({ label, onDelete, className }) =>
+  <button type="button" onClick={onDelete} className={className}>{label}</button>;
+
+const DeleteButton = withDeleteHandler(DeleteButtonMarkup)
+
+export default () => (
+  <ApolloWrapper uri="http://localhost:4001/api">
+    <List
+      HeaderComponent={({ list }) => {
+        console.log('Result from the executed query', list);
+
+        return (
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Delete</th>
+          </tr>
+        );
+      }}
+      FooterComponent={({ list }) => <div>Total: {list.length}</div>}
+      renderItem={(item) => (
+        <tr key={item.id}>
+          <td>{item.id}</td>
+          <td>{item.name}</td>
+          <td>
+            <DeleteButton
+              id={item.id}
+              mutation={DELETE_INDUSTRY}
+              resource="industry"
+              label="Delete"
+              onDelete={(deletedItem) => console.log(deletedItem)}
+              onErrors={(errors) => console.log(errors.generalError)}
+              update={(cache) =>
+                deleteFromList(
+                  cache,
+                  INDUSTRIES,
+                  'industries',
+                  (industry) => industry.id == item.id)
+              }
+            />
+          </td>
+        </tr>
+      )}
+      query={INDUSTRIES}
+      variables={{ first: 30, after: '', before: '' }}
+      filter={{}}
+      path='industries'
+    />
+  </ApolloWrapper>
+);
 ```
 
 ## withFilterForm API

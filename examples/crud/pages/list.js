@@ -5,8 +5,8 @@ import { List } from '@tapgiants/crud';
 
 
 const INDUSTRIES = gql`
-query($filter: IndustryFilterInput, $input: ListInput) {
-  industries(input: $input, filter: $filter) {
+  query($filter: IndustryFilterInput, $input: ListInput) {
+    industries(input: $input, filter: $filter) {
       list {
         id
         name

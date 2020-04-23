@@ -23,8 +23,8 @@
     "recompose": "^0.30.0",
     "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2",
-    "@tapgiants/form": "^1.0.10",
-    "@tapgiants/graphql": "^1.0.1",
+    "@tapgiants/form": "^1.0.11",
+    "@tapgiants/graphql": "^1.1.0",
     "apollo-boost": "^0.1.23",
     "graphql": "^14.0.2",
     "node-noop": "^1.0.0"
@@ -33,8 +33,8 @@
     "react": "^16.7.0",
     "react-apollo": "^2.3.3",
     "react-dom": "^16.7.0",
-    "@tapgiants/form": "^1.0.10",
-    "@tapgiants/graphql": "^1.0.1",
+    "@tapgiants/form": "^1.0.11",
+    "@tapgiants/graphql": "^1.1.0",
     "recompose": "^0.30.0",
     "apollo-boost": "^0.1.23",
     "graphql": "^14.0.2"

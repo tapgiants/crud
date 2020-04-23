@@ -1,0 +1,24 @@
+{
+  "name": "crud",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Tap Giants",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@tapgiants/crud": "^1.0.1",
+    "@tapgiants/form": "^1.0.11",
+    "@tapgiants/graphql": "^1.1.0",
+    "apollo-boost": "^0.1.27",
+    "graphql": "^14.1.1",
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-apollo": "^2.4.0",
+    "react-dom": "^16.7.0",
+    "recompose": "^0.30.0"
+  }
+}
